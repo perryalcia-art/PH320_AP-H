@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cross-Sectional Studies and Anxiety Trends</title>
+<style>
+body {
+margin: 0;
+padding: 0;
+background: #ffffff;
+color: #222;
+font-family: Georgia, "Times New Roman", serif;
+line-height: 1.8;
+font-size: 1.1rem;
+}
+ 
+.container {
+max-width: 700px;
+margin: 0 auto;
+padding: 2rem 1.5rem;
+}
+ 
+h1 {
+font-size: 2rem;
+line-height: 1.3;
+margin-bottom: 2rem;
+}
+ 
+p {
+margin-bottom: 1.5rem;
+}
+ 
+footer {
+margin-top: 3rem;
+padding-top: 1rem;
+border-top: 1px solid #ddd;
+font-size: 0.9rem;
+color: #555;
+}
+ 
+a {
+color: #0066cc;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Cross-Sectional Studies and Anxiety Trends</h1>
+ 
+<p>The National Health Statistics Center claimed, “As young adults have moved through their twenties over the past decade, their anxiety has steadily worsened. A generation is becoming more anxious as it ages.” The center selected 27,000 new adults randomly to complete a mental health survey. They were asked questions about their mental health in the past 30 days in an interview. The participants were given one chance to complete the survey.</p>
+ 
+<p>The gap in design is that the researchers never followed the same people over time. The claim assumes that as people age, their anxiety gets worse. But the study didn’t continue surveying the same young adults from 2014 to 2023. The uptick in the anxiety rate could be due to the difference between the groups surveyed each year or even changes in the survey method, since the interview changed from in-person to a mix of phone and web interviews in 2019, which could skew the results.</p>
+ 
+<p>Generally, cross-sectional studies are useful to show trends and differences between groups at a specific point in time in the population. They can show that the rates between the two groups were remarkably different in 2023 and 2014. However, this type of design cannot show how the same individuals changed over a period since they were never followed. The design could only provide snapshots of different groups at different times. Therefore, cross-sectional data cannot prove causation between aging and anxiety.</p>
+ 
+<p>The authors should have published a claim that “The share of young adults aged 18 to 25 reporting frequent anxiety symptoms rose from 8.1% in 2014 to 14.7% in 2023, but our data cannot determine whether the same individuals became more anxious as they aged.”</p>
+ 
+<footer>
+<p>Alcia Perry-Hilaire<br>
+PH 320 · Applied Biostatistics in Public Health</p>
+ 
+<p><a href="index.html">Home</a></p>
+ 
+<p><strong>Sentences changed by more than a word or two:</strong></p>
+<p>Original: “The National Health Statistics Center claimed, ‘As young adults have moved through their twenties over the past decade, their anxiety has steadily worsened — a generation is becoming more anxious as it ages.’ the center select 27000 new adults randomly to complete a mental health survey.”</p>
+<p>Revised: “The National Health Statistics Center claimed, ‘As young adults have moved through their twenties over the past decade, their anxiety has steadily worsened. A generation is becoming more anxious as it ages.’ The center selected 27,000 new adults randomly to complete a mental health survey.”</p>
+ 
+<p>Original: “The uptick in the anxiety rate could be due to the difference between the group survey each year or even the changes in the survey method, since the interview changed from in person to a mix of phone and web interview in 2019, which could skew the result.”</p>
+<p>Revised: “The uptick in the anxiety rate could be due to the difference between the groups surveyed each year or even changes in the survey method, since the interview changed from in-person to a mix of phone and web interviews in 2019, which could skew the results.”</p>
+ 
+<p>Original: “They can show the rate of between the two groups was remarkably different in 2023 and 2014.”</p>
+<p>Revised: “They can show that the rates between the two groups were remarkably different in 2023 and 2014.”</p>
+ 
+<p>Original: “The design could only snapshot different groups at different times.”</p>
+<p>Revised: “The design could only provide snapshots of different groups at different times.”</p>
+ 
+<p>Original: “The authors should have published a claim that ‘The share of young adults aged 18 to 25 reporting frequent anxiety symptoms increase from rose from 8.1% in 2014 to 14.7% in 2023, but our data cannot determine whether the same individuals became niveous as they aged.’”</p>
+<p>Revised: “The authors should have published a claim that ‘The share of young adults aged 18 to 25 reporting frequent anxiety symptoms rose from 8.1% in 2014 to 14.7% in 2023, but our data cannot determine whether the same individuals became more anxious as they aged.’”</p>
+</footer>
+</div>
+</body>
+</html>
