@@ -61,6 +61,77 @@
         color: #4a78c2;
         text-decoration: none;
     }
+    .site-nav {
+        background: white;
+        border-bottom: 1px solid #ddd;
+        padding: 10px 20px;
+        position: relative;
+        z-index: 1;
+    }
+    .site-nav-menu {
+        max-width: 900px;
+        margin: auto;
+        position: relative;
+    }
+    .site-nav-menu summary {
+        list-style: none;
+        cursor: pointer;
+    }
+    .site-nav-menu summary::-webkit-details-marker {
+        display: none;
+    }
+    .site-nav-toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 14px;
+        border-radius: 6px;
+        border: 1px solid #ddd;
+        background: white;
+        color: #4a78c2;
+        font-weight: bold;
+    }
+    .site-nav-toggle:hover,
+    .site-nav-toggle:focus-visible {
+        background: #edf2fa;
+    }
+    .menu-icon {
+        display: grid;
+        gap: 4px;
+    }
+    .menu-icon span {
+        display: block;
+        width: 18px;
+        height: 2px;
+        background: currentColor;
+    }
+    .site-nav-links {
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 0;
+        display: grid;
+        gap: 4px;
+        min-width: min(100%, 320px);
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background: white;
+        box-shadow: 0 8px 20px #0002;
+    }
+    .site-nav a {
+        display: block;
+        padding: 10px 14px;
+        border-radius: 6px;
+        font-weight: bold;
+    }
+    .site-nav a:hover,
+    .site-nav a:focus-visible {
+        background: #edf2fa;
+    }
+    .site-nav a[aria-current="page"] {
+        background: #4a78c2;
+        color: white;
+    }
     @media (min-width: 700px) {
         .portfolio-grid {
             grid-template-columns: repeat(3, 1fr);
@@ -70,10 +141,19 @@
 </head>
 <body>
 
-<div style="background:#f7f7f7;padding:10px 20px;text-align:center;border-bottom:1px solid #ddd;">
-    <a href="index.html">Home</a> |
-    <a href="cross-sectional.html">[TYPE YOUR TITLE HERE]</a>
-</div>
+<nav class="site-nav" aria-label="Main navigation">
+    <details class="site-nav-menu">
+        <summary class="site-nav-toggle">
+            <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+            Pages
+        </summary>
+        <div class="site-nav-links">
+            <a href="index.html" aria-current="page">About Me</a>
+            <a href="cross-sectional.html">Week 4: Cross-Sectional Studies</a>
+            <a href="https://anxietytrendhmtl-7mq9z35q6-biostat2026.vercel.app/">Anxiety Trend</a>
+        </div>
+    </details>
+</nav>
 
 <header>
     <h1>Alcia Perry-Hilaire</h1>
