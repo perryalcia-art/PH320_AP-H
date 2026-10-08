@@ -47,7 +47,108 @@ text-decoration: none;
 .footer a:hover {
 text-decoration: underline;
 }
- 
+
+.site-nav {
+background: #f7f7f7;
+border-bottom: 1px solid #ddd;
+padding: 0 20px;
+font-family: Arial, sans-serif;
+line-height: 1.5;
+}
+
+.site-nav-inner {
+max-width: 1100px;
+min-height: 56px;
+margin: auto;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+position: relative;
+}
+
+.menu-toggle {
+display: none;
+align-items: center;
+gap: 10px;
+padding: 10px 12px;
+border: 1px solid #4a78c2;
+border-radius: 6px;
+background: white;
+color: #4a78c2;
+font: inherit;
+cursor: pointer;
+}
+
+.menu-icon,
+.menu-icon::before,
+.menu-icon::after {
+display: block;
+width: 20px;
+height: 2px;
+background: currentColor;
+}
+
+.menu-icon {
+position: relative;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+position: absolute;
+left: 0;
+content: "";
+}
+
+.menu-icon::before {
+top: -6px;
+}
+
+.menu-icon::after {
+top: 6px;
+}
+
+.site-links {
+display: flex;
+gap: 24px;
+}
+
+.site-links a {
+padding: 16px 0;
+}
+
+@media (max-width: 600px) {
+.site-nav-inner {
+min-height: 56px;
+}
+
+.menu-toggle {
+display: inline-flex;
+}
+
+.site-links {
+display: none;
+position: absolute;
+z-index: 1;
+top: 100%;
+left: -20px;
+right: -20px;
+flex-direction: column;
+gap: 0;
+padding: 8px 20px;
+background: #f7f7f7;
+box-shadow: 0 4px 8px rgb(0 0 0 / 12%);
+}
+
+.site-links.is-open {
+display: flex;
+}
+
+.site-links a {
+padding: 12px 0;
+border-top: 1px solid #ddd;
+}
+}
+
 .changes {
 margin-top: 30px;
 font-size: 0.9rem;
@@ -59,10 +160,18 @@ margin-bottom: 12px;
 }
 </style>
 </head>
-<body><div style="background:#f7f7f7;padding:10px 20px;text-align:center;border-bottom:1px solid #ddd;">
-    <a href="index.html">Home</a> |
-    <a href="cross-sectional.html">[What Cross-sectional Studies Can & Can Not Tell You]</a>
-</div>
+<body><nav class="site-nav" aria-label="Main navigation">
+    <div class="site-nav-inner">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-links">
+            <span class="menu-icon" aria-hidden="true"></span>
+            <span>Menu</span>
+        </button>
+        <div class="site-links" id="site-links">
+            <a href="index.html">Home</a>
+            <a href="cross-sectional.html">[What Cross-sectional Studies Can & Can Not Tell You]</a>
+        </div>
+    </div>
+</nav>
 <div class="container">
  
 <h1>Cross-Sectional Studies and Anxiety Trends</h1>
@@ -88,5 +197,31 @@ PH 320 · Applied Biostatistics in Public Health</p>
 </div>
  
 </div>
+
+<script>
+const menuToggle = document.querySelector(".menu-toggle");
+const siteLinks = document.querySelector(".site-links");
+
+menuToggle.addEventListener("click", () => {
+    const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+    menuToggle.setAttribute("aria-expanded", String(!isExpanded));
+    siteLinks.classList.toggle("is-open", !isExpanded);
+});
+
+siteLinks.addEventListener("click", (event) => {
+    if (event.target.closest("a")) {
+        menuToggle.setAttribute("aria-expanded", "false");
+        siteLinks.classList.remove("is-open");
+    }
+});
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && siteLinks.classList.contains("is-open")) {
+        menuToggle.setAttribute("aria-expanded", "false");
+        siteLinks.classList.remove("is-open");
+        menuToggle.focus();
+    }
+});
+</script>
 </body>
 </html>
