@@ -11,6 +11,32 @@
         background-color: #f7f7f7;
         color: #333;
     }
+    .site-nav {
+        position: relative;
+        background: #f7f7f7;
+        border-bottom: 1px solid #ddd;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .menu-toggle {
+        display: none;
+        border: 1px solid #4a78c2;
+        border-radius: 4px;
+        background: white;
+        color: #4a78c2;
+        padding: 8px 12px;
+        font: inherit;
+        cursor: pointer;
+    }
+    .site-nav-links {
+        display: flex;
+        gap: 20px;
+    }
+    .site-nav-links a {
+        color: #4a78c2;
+    }
     header {
         background: linear-gradient(135deg, #4a78c2, #d88fbf);
         color: white;
@@ -66,14 +92,43 @@
             grid-template-columns: repeat(3, 1fr);
         }
     }
+    @media (max-width: 600px) {
+        .site-nav {
+            justify-content: flex-start;
+        }
+        .menu-toggle {
+            display: block;
+        }
+        .site-nav-links {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            top: 100%;
+            left: 0;
+            right: 0;
+            flex-direction: column;
+            gap: 0;
+            background: #f7f7f7;
+            border-bottom: 1px solid #ddd;
+        }
+        .site-nav-links.is-open {
+            display: flex;
+        }
+        .site-nav-links a {
+            padding: 12px 20px;
+        }
+    }
 </style>
 </head>
 <body>
 
-<div style="background:#f7f7f7;padding:10px 20px;text-align:center;border-bottom:1px solid #ddd;">
-    <a href="index.html">Home</a> |
-    <a href="cross-sectional.html">[TYPE YOUR TITLE HERE]</a>
-</div>
+<nav class="site-nav" aria-label="Main navigation">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav-links">☰ Menu</button>
+    <div class="site-nav-links" id="site-nav-links">
+        <a href="index.html">Home</a>
+        <a href="cross-sectional.html">Cross-Sectional Studies</a>
+    </div>
+</nav>
 
 <header>
     <h1>Alcia Perry-Hilaire</h1>
@@ -132,6 +187,17 @@
     <p><strong>Email:</strong> <a href="mailto:perryalcia@gmail.com">perryalcia@gmail.com</a></p>
     <p><strong>LinkedIn:</strong> </a>" target="_blank">linkedin.com/in/alcia-perry-hilaire-0b0574328</a></p>
 </footer>
+
+<script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menuLinks = document.querySelector(".site-nav-links");
+
+    menuToggle.addEventListener("click", () => {
+        const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!isExpanded));
+        menuLinks.classList.toggle("is-open", !isExpanded);
+    });
+</script>
 
 </body>
 </html>

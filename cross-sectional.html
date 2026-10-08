@@ -13,7 +13,7 @@ color: #222222;
 font-family: Georgia, "Times New Roman", serif;
 line-height: 1.8;
 }
- 
+
 .container {
 max-width: 700px;
 margin: 0 auto;
@@ -47,7 +47,71 @@ text-decoration: none;
 .footer a:hover {
 text-decoration: underline;
 }
- 
+
+.site-nav {
+position: relative;
+background: #f7f7f7;
+border-bottom: 1px solid #ddd;
+padding: 10px 20px;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+font-family: Arial, sans-serif;
+line-height: 1.5;
+}
+
+.menu-toggle {
+display: none;
+border: 1px solid #4a78c2;
+border-radius: 4px;
+background: white;
+color: #4a78c2;
+padding: 8px 12px;
+font: inherit;
+cursor: pointer;
+}
+
+.site-nav-links {
+display: flex;
+gap: 20px;
+}
+
+.site-nav-links a {
+color: #4a78c2;
+text-decoration: none;
+}
+
+@media (max-width: 600px) {
+.site-nav {
+justify-content: flex-start;
+}
+
+.menu-toggle {
+display: block;
+}
+
+.site-nav-links {
+display: none;
+position: absolute;
+z-index: 1;
+top: 100%;
+left: 0;
+right: 0;
+flex-direction: column;
+gap: 0;
+background: #f7f7f7;
+border-bottom: 1px solid #ddd;
+}
+
+.site-nav-links.is-open {
+display: flex;
+}
+
+.site-nav-links a {
+padding: 12px 20px;
+}
+}
+
 .changes {
 margin-top: 30px;
 font-size: 0.9rem;
@@ -59,12 +123,15 @@ margin-bottom: 12px;
 }
 </style>
 </head>
-<body><div style="background:#f7f7f7;padding:10px 20px;text-align:center;border-bottom:1px solid #ddd;">
-    <a href="index.html">Home</a> |
-    <a href="cross-sectional.html">[What Cross-sectional Studies Can & Can Not Tell You]</a>
-</div>
+<body><nav class="site-nav" aria-label="Main navigation">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav-links">☰ Menu</button>
+    <div class="site-nav-links" id="site-nav-links">
+        <a href="index.html">Home</a>
+        <a href="cross-sectional.html">Cross-Sectional Studies</a>
+    </div>
+</nav>
 <div class="container">
- 
+
 <h1>Cross-Sectional Studies and Anxiety Trends</h1>
  
 <p>The National Health Statistics Center claimed, “As young adults have moved through their twenties over the past decade, their anxiety has steadily worsened. A generation is becoming more anxious as it ages.” The center selected 27,000 new adults randomly to complete a mental health survey. They were asked questions about their mental health in the past 30 days in an interview. The participants were given one chance to complete the survey.</p>
@@ -86,7 +153,17 @@ PH 320 · Applied Biostatistics in Public Health</p>
 <h2>Sentences changed by more than a word or two</h2>
 <p>None.</p>
 </div>
- 
+
 </div>
+<script>
+const menuToggle = document.querySelector(".menu-toggle");
+const menuLinks = document.querySelector(".site-nav-links");
+
+menuToggle.addEventListener("click", () => {
+    const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+    menuToggle.setAttribute("aria-expanded", String(!isExpanded));
+    menuLinks.classList.toggle("is-open", !isExpanded);
+});
+</script>
 </body>
 </html>
