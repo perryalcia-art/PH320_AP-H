@@ -146,6 +146,108 @@ font-size: 0.9rem;
 font-size: 1rem;
 margin-bottom: 12px;
 }
+
+* {
+box-sizing: border-box;
+}
+
+body {
+background: #f2f6f6;
+color: #172b3a;
+font-family: "Segoe UI", Arial, sans-serif;
+line-height: 1.75;
+}
+
+.container {
+max-width: 780px;
+margin: 36px auto;
+padding: 48px clamp(22px, 6vw, 64px);
+border: 1px solid #dce5e5;
+border-radius: 16px;
+background: #fff;
+box-shadow: 0 12px 30px #173a3a12;
+}
+
+.container > h1 {
+margin: 0 0 28px;
+color: #172b3a;
+font-family: "Segoe UI", Arial, sans-serif;
+font-size: clamp(2rem, 5vw, 2.8rem);
+letter-spacing: -0.035em;
+}
+
+.container > p {
+color: #405563;
+font-size: 1.08rem;
+}
+
+.site-nav {
+padding: 12px 20px;
+border-bottom-color: #dce5e5;
+background: #ffffffed;
+backdrop-filter: blur(12px);
+}
+
+.site-nav-toggle {
+border-color: #dce5e5;
+border-radius: 8px;
+color: #105359;
+box-shadow: 0 2px 6px #173a3a0d;
+}
+
+.site-nav-toggle:hover,
+.site-nav-toggle:focus-visible,
+.site-nav a:hover,
+.site-nav a:focus-visible {
+background: #e8f2f1;
+}
+
+.site-nav-links {
+border-color: #dce5e5;
+border-radius: 10px;
+box-shadow: 0 14px 32px #173a3a1f;
+}
+
+.site-nav a {
+color: #105359;
+}
+
+.site-nav a[aria-current="page"] {
+background: #176b70;
+color: white;
+}
+
+.footer {
+margin-top: 40px;
+padding-top: 24px;
+border-top-color: #dce5e5;
+color: #526574;
+}
+
+.footer a,
+.changes a {
+color: #105359;
+}
+
+.changes {
+padding: 20px 22px;
+border: 1px solid #dce5e5;
+border-radius: 12px;
+background: #f7f9f9;
+color: #526574;
+}
+
+.changes h2 {
+color: #172b3a;
+}
+
+@media (max-width: 560px) {
+.container {
+margin: 20px 12px;
+padding: 32px 22px;
+border-radius: 12px;
+}
+}
 </style>
 </head>
 <body><nav class="site-nav" aria-label="Main navigation">
