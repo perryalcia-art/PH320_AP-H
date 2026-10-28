@@ -174,31 +174,56 @@
         line-height: 1.12;
     }
 
-    header p {
-        max-width: 700px;
-        margin: 14px auto;
-        color: #e4f0ef;
-        font-size: 1.05rem;
+    .hero-content {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(240px, 0.7fr);
+        align-items: center;
+        gap: clamp(32px, 7vw, 88px);
+        max-width: 1040px;
+        margin: 42px auto 0;
+        text-align: left;
     }
 
-    header p:first-of-type {
-        font-size: 1rem !important;
+    .hero-copy {
+        min-width: 0;
     }
 
-    header p:first-of-type strong {
+    .hero-course {
+        margin: 0 0 18px;
         color: #c4e6d9;
-        font-size: inherit !important;
+        font-size: clamp(1rem, 1.8vw, 1.2rem);
+        font-weight: 700;
+        white-space: nowrap;
+    }
+
+    .hero-question {
+        margin: 0;
+        color: #e4f0ef;
+        font-size: clamp(1.25rem, 2.4vw, 1.8rem);
+        line-height: 1.45;
+    }
+
+    .hero-profile {
+        margin: 0;
+        text-align: center;
     }
 
     .hero-photo {
         display: block;
-        width: 168px;
-        height: 168px;
-        margin: 28px auto 0;
+        width: min(100%, 240px);
+        height: 290px;
+        margin: 0 auto;
         border: 5px solid #ffffffd9;
-        border-radius: 50%;
+        border-radius: 18px;
         object-fit: cover;
         box-shadow: 0 10px 28px #102e3560;
+    }
+
+    .hero-profile p {
+        max-width: 340px;
+        margin: 18px auto 0;
+        color: #e4f0ef;
+        font-size: 1rem;
     }
 
     section {
@@ -353,13 +378,27 @@
             padding: 56px 20px 62px;
         }
 
+        .hero-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .hero-profile {
+            order: -1;
+        }
+
+        .hero-course {
+            white-space: normal;
+        }
+
         section {
             padding: 32px 22px;
         }
 
         .hero-photo {
-            width: 148px;
-            height: 148px;
+            width: min(100%, 220px);
+            height: 270px;
         }
     }
 
@@ -391,10 +430,18 @@
 
 <header>
     <h1>Alcia Perry-Hilaire</h1>
-    <p style="font-size:0.9em;"><strong style="font-size:14px;">Applied Biostatistics in Public Health (PH 320)</strong>: Why is frequent mental distress higher in Jamaica than in most of New York City - and how would we know that's really true?</p>
-    <p>Community Health student focused on partnering with marginalized communities to gain better access to health services.</p>
-
-    <img src="photo.jpg" alt="Portrait of Alcia Perry-Hilaire in graduation attire" class="hero-photo">
+    <div class="hero-content">
+        <div class="hero-copy">
+            <p class="hero-course">Applied Biostatistics in Public Health (PH 320)</p>
+            <p class="hero-question">Why is frequent mental distress higher in Jamaica than in most of New York City - and how would we know that's really true?</p>
+        </div>
+        <figure class="hero-profile">
+            <img src="photo.jpg" alt="Portrait of Alcia Perry-Hilaire in graduation attire" class="hero-photo">
+            <figcaption>
+                <p>Community Health student focused on partnering with marginalized communities to gain better access to health services.</p>
+            </figcaption>
+        </figure>
+    </div>
 </header>
 
 <section>
