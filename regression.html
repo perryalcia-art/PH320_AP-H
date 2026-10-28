@@ -54,6 +54,92 @@
             text-align: center;
         }
 
+        .site-nav {
+            background: white;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 20px;
+            position: relative;
+            z-index: 1;
+            font-family: Arial, sans-serif;
+        }
+
+        .site-nav-menu {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .site-nav-menu summary {
+            list-style: none;
+            cursor: pointer;
+        }
+
+        .site-nav-menu summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .site-nav-toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background: white;
+            color: #4a78c2;
+            font-weight: bold;
+        }
+
+        .site-nav-toggle:hover,
+        .site-nav-toggle:focus-visible {
+            background: #edf2fa;
+        }
+
+        .menu-icon {
+            display: grid;
+            gap: 4px;
+        }
+
+        .menu-icon span {
+            display: block;
+            width: 18px;
+            height: 2px;
+            background: currentColor;
+        }
+
+        .site-nav-links {
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            display: grid;
+            gap: 4px;
+            min-width: min(100%, 320px);
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: white;
+            box-shadow: 0 8px 20px #0002;
+        }
+
+        .site-nav a {
+            display: block;
+            padding: 10px 14px;
+            border-radius: 6px;
+            color: #4a78c2;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .site-nav a:hover,
+        .site-nav a:focus-visible {
+            background: #edf2fa;
+        }
+
+        .site-nav a[aria-current="page"] {
+            background: #4a78c2;
+            color: white;
+        }
+
         @media (max-width: 520px) {
             body {
                 padding: 16px 12px;
@@ -66,6 +152,19 @@
     </style>
 </head>
 <body>
+    <nav class="site-nav" aria-label="Main navigation">
+        <details class="site-nav-menu">
+            <summary class="site-nav-toggle">
+                <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+                Portfolio
+            </summary>
+            <div class="site-nav-links">
+                <a href="index.html">About Me</a>
+                <a href="cross-sectional.html">Week 4: Cross-Sectional Studies</a>
+                <a href="regression.html" aria-current="page">Week 6: Skipping Checkups and Mental Distress</a>
+            </div>
+        </details>
+    </nav>
     <main>
         <h1>Skipping Checkups and Mental Distress in NYC ZIP Codes</h1>
 
