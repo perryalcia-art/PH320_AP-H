@@ -411,92 +411,82 @@
         }
     }
 </style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<nav class="site-nav" aria-label="Main navigation">
-    <details class="site-nav-menu">
-        <summary class="site-nav-toggle">
-            <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
-            Portfolio
-        </summary>
-        <div class="site-nav-links">
-            <a href="index.html" aria-current="page">About Me</a>
-            <a href="cross-sectional.html">Week 4: Cross-sectional Studies: What it Can &amp; Can Not Tell You</a>
-            <a href="regression.html">Week 6: Regressional Studies: No Health Check-Ups &amp; Mental Distress</a>
-        </div>
-    </details>
+<nav class="topbar" aria-label="Main navigation">
+    <a class="wordmark" href="index.html">Alcia Perry-Hilaire</a>
+    <div class="nav-links">
+        <a href="#work">Selected work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
 </nav>
 
-<header>
-    <h1>Alcia Perry-Hilaire</h1>
-    <div class="hero-content">
+<header class="hero">
+    <div class="hero-inner">
         <div class="hero-copy">
+            <p class="eyebrow">Community health · Applied biostatistics</p>
+            <h1>Alcia Perry-Hilaire</h1>
             <p class="hero-course">Applied Biostatistics in Public Health (PH 320)</p>
             <p class="hero-question">Why is frequent mental distress higher in Jamaica than in most of New York City - and how would we know that's really true?</p>
         </div>
         <figure class="hero-profile">
             <img src="photo.jpg" alt="Portrait of Alcia Perry-Hilaire in graduation attire" class="hero-photo">
-            <figcaption>
-                <p>Community Health student focused on partnering with marginalized communities to gain better access to health services.</p>
-            </figcaption>
+            <figcaption>Community Health student focused on partnering with marginalized communities to gain better access to health services.</figcaption>
         </figure>
     </div>
 </header>
 
-<section>
-    <h2>About Me</h2>
+<main class="content">
+    <section id="work" aria-labelledby="work-heading">
+        <div class="section-heading">
+            <div>
+                <p class="section-label">Course portfolio · York College CUNY</p>
+                <h2 id="work-heading">Selected work</h2>
+            </div>
+            <p>Exploring public health questions through research design, data, and community-centered interpretation.</p>
+        </div>
+        <div class="projects">
+            <a class="project" href="cross-sectional.html">
+                <span class="project-number">Week 4 · Study design</span>
+                <h3>Cross-sectional Studies: What it Can &amp; Can Not Tell You</h3>
+                <p>Examining how cross-sectional research can reveal trends while leaving questions about individual change and causation unanswered.</p>
+                <span class="project-cta">Read project <span aria-hidden="true">→</span></span>
+            </a>
+            <a class="project" href="regression.html">
+                <span class="project-number">Week 6 · Regression analysis</span>
+                <h3>Regressional Studies: No Health Check-Ups &amp; Mental Distress</h3>
+                <p>Interpreting the relationship between missed routine checkups and reported mental distress across NYC ZIP codes.</p>
+                <span class="project-cta">Read project <span aria-hidden="true">→</span></span>
+            </a>
+        </div>
+    </section>
+
+    <section class="about" id="about" aria-labelledby="about-heading">
+        <div>
+            <p class="section-label">My focus</p>
+            <h2 id="about-heading">About me</h2>
+        </div>
+        <div>
+            <p>I chose public and community health because I want to help communities of color facing disproportionate rates of chronic illness, maternal mortality, and barriers to healthcare access. One of the major health issues I care deeply about is the high rate of type 2 diabetes among people of color, and finding targeted ways to improve living conditions—such as access to healthy foods—in these communities. I am working toward becoming a Certified Community Health Educator leading a team in health promotion and outreach.</p>
+            <div class="skills" aria-label="Skills">
+                <span>Motivational Interviewing</span>
+                <span>Mental Health First Aid</span>
+                <span>Cultural Competency</span>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="contact-footer" id="contact">
+    <p>Alcia Perry-Hilaire · Community Health Education</p>
     <p>
-        I chose public and community health because I want to help communities of color facing disproportionate rates of chronic illness, maternal mortality,
-        and barriers to healthcare access. One of the major health issues I care deeply about is the high rate of type 2 diabetes among people of color, and
-        finding targeted ways to improve living conditions—such as access to healthy foods—in these communities. I am working toward becoming a Certified
-        Community Health Educator leading a team in health promotion and outreach.
+        <a href="mailto:perryalcia@gmail.com"><svg class="contact-icon" aria-hidden="true" viewBox="0 0 24 24"><path fill="#ea4335" d="M3 5.5A2.5 2.5 0 0 1 5.5 3h13A2.5 2.5 0 0 1 21 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 18.5v-13zm2 .1v.2l7 5.1 7-5.1v-.2a.6.6 0 0 0-.6-.6H5.6a.6.6 0 0 0-.6.6zm14 2.7-6.4 4.7a1 1 0 0 1-1.2 0L5 8.3v10.2c0 .33.27.6.6.6h12.8c.33 0 .6-.27.6-.6V8.3z"></path></svg>Email</a>
+        ·
+        <a href="https://www.linkedin.com/in/alcia-perry-hilaire-0b0574328/" target="_blank" rel="noopener noreferrer"><svg class="contact-icon" aria-hidden="true" viewBox="0 0 24 24"><rect width="24" height="24" rx="3" fill="currentColor"></rect><path fill="#fff" d="M7.1 9.2H4.4V19h2.7V9.2zM5.75 8a1.55 1.55 0 1 0 0-3.1 1.55 1.55 0 0 0 0 3.1zM19.6 13.4c0-2.95-1.58-4.33-3.69-4.33a3.18 3.18 0 0 0-2.87 1.58V9.2h-2.7V19h2.7v-4.86c0-1.28.24-2.52 1.83-2.52 1.56 0 1.58 1.46 1.58 2.6V19h2.7l.45-5.6z"></path></svg>LinkedIn</a>
     </p>
-</section>
-
-<section>
-    <h2>Skills</h2>
-    <ul class="skills-list">
-        <li>Motivational Interviewing Skills</li>
-        <li>Certified Mental Health First Aid</li>
-        <li>Cultural Competency</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Applied Biostatistics in Public Health (PH 320) Portfolio — York College CUNY</h2>
-    <div class="portfolio-grid">
-
-        <!-- Add Week 3 link here -->
-        <div class="card">
-            <h3>Week 3</h3>
-            <p>Coming soon.</p>
-        </div>
-
-        <!-- Add Week 4 link here -->
-        <div class="card">
-            <h3>Week 4</h3>
-            <p><a href="cross-sectional.html">Cross-sectional Studies: What it Can &amp; Can Not Tell You</a></p>
-        </div>
-
-        <!-- Add Week 5 link here -->
-        <div class="card">
-            <h3>Week 5</h3>
-            <p>Coming soon.</p>
-        </div>
-
-        <!-- Add Week 6 link here -->
-        <div class="card">
-            <h3>Week 6</h3>
-            <p><a href="regression.html">Regressional Studies: No Health Check-Ups &amp; Mental Distress</a></p>
-        </div>
-
-    </div>
-</section>
-
-<footer>
-    <p><strong>Email:</strong> <a href="mailto:perryalcia@gmail.com"><svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" style="vertical-align: -6px; margin-right: 6px;"><path fill="#ea4335" d="M3 5.5A2.5 2.5 0 0 1 5.5 3h13A2.5 2.5 0 0 1 21 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 18.5v-13zm2 .1v.2l7 5.1 7-5.1v-.2a.6.6 0 0 0-.6-.6H5.6a.6.6 0 0 0-.6.6zm14 2.7-6.4 4.7a1 1 0 0 1-1.2 0L5 8.3v10.2c0 .33.27.6.6.6h12.8c.33 0 .6-.27.6-.6V8.3z"></path></svg>perryalcia@gmail.com</a></p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/alcia-perry-hilaire-0b0574328/" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" style="vertical-align: -6px; margin-right: 6px;"><rect width="24" height="24" rx="3" fill="currentColor"></rect><path fill="#fff" d="M7.1 9.2H4.4V19h2.7V9.2zM5.75 8a1.55 1.55 0 1 0 0-3.1 1.55 1.55 0 0 0 0 3.1zM19.6 13.4c0-2.95-1.58-4.33-3.69-4.33a3.18 3.18 0 0 0-2.87 1.58V9.2h-2.7V19h2.7v-4.86c0-1.28.24-2.52 1.83-2.52 1.56 0 1.58 1.46 1.58 2.6V19h2.7l.45-5.6z"></path></svg>linkedin.com/in/alcia-perry-hilaire-0b0574328</a></p>
 </footer>
 
 </body>
