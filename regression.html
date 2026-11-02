@@ -36,6 +36,31 @@
             margin: 24px auto;
         }
 
+        .stat-key {
+            display: flex;
+            justify-content: center;
+            gap: clamp(16px, 5vw, 36px);
+            margin: -8px 0 28px;
+            padding: 12px 18px;
+            border-radius: 8px;
+            background: rgb(0 0 0 / 50%);
+            font-size: 1.05rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .stat-key-correlation {
+            color: #54d18a;
+        }
+
+        .stat-key-slope {
+            color: #ff7777;
+        }
+
+        .stat-key-p-value {
+            color: #ffd84d;
+        }
+
         .home-link {
             display: inline-block;
             margin-top: 16px;
@@ -258,16 +283,21 @@
         <h1>Regressional Studies: No Health Check-Ups &amp; Mental Distress</h1>
 
         <img src="table.png" alt="Regression output table">
+        <div class="stat-key" aria-label="Regression statistics">
+            <span class="stat-key-correlation">r = .14,</span>
+            <span class="stat-key-slope">b = 0.12,</span>
+            <span class="stat-key-p-value">p &gt; .075</span>
+        </div>
 
-        <p>The correlation between the percent of adults who skipped a routine checkup and the percent reporting mental distress is r = +0.14, which is a positive, weak relationship.</p>
+        <p>The correlation (r) between the percent of adults who skipped a routine checkup and the percent reporting mental distress indicates a positive, weak relationship.</p>
 
-        <p>The slope is 0.1169, so for every 1-percentage-point increase in skipped checkups, mental distress goes up by about 0.12 percentage points on average.</p>
+        <p>The slope (b) shows that for every 1-percentage-point increase in skipped checkups, mental distress goes up by about 0.12 percentage points on average.</p>
 
-        <p>The p-value is 0.075, which is above the .05 cutoff, so this result is not statistically significant and may be due to chance.</p>
+        <p>The p-value (p) is above the .05 cutoff, so this result is not statistically significant and may be due to chance.</p>
 
         <h2>What It Means for People</h2>
 
-        <p>In the ZIP codes where more people skip their checkups, some neighborhoods are likely to report mental distress, but the association between the variables is weak. This doesn’t prove that missing a checkup causes distress. Although the p-value is statistically insignificant, it doesn’t rule out the possibility that these neighborhoods would benefit from mental health support.</p>
+        <p>In the ZIP codes where more people skip their checkups, some neighborhoods are likely to report mental distress, but the association between the variables is weak. This doesn’t prove that missing a checkup causes distress. Although the p-value (p) is statistically insignificant, it doesn’t rule out the possibility that these neighborhoods would benefit from mental health support.</p>
 
         <footer class="article-footer">
             <p>Alcia Perry-Hilaire · PH 320 · Applied Biostatistics in Public Health</p>
