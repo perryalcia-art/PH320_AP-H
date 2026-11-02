@@ -37,6 +37,9 @@
         }
 
         .stat-key {
+            display: flex;
+            justify-content: center;
+            gap: clamp(16px, 5vw, 36px);
             overflow-x: auto;
             margin: 0 0 28px;
             padding: 12px 18px;
@@ -44,8 +47,7 @@
             background: #000;
             font-size: 1.05rem;
             font-weight: 700;
-            text-align: center;
-            white-space: pre;
+            white-space: nowrap;
         }
 
         .stat-key-correlation {
@@ -287,7 +289,9 @@
 
         <img src="table.png" alt="Regression output table">
         <div class="stat-key" aria-label="Regression statistics">
-            <span class="stat-key-correlation">r  =  .14</span><span class="stat-key-separator">,         </span><span class="stat-key-slope">b  =  0.12</span><span class="stat-key-separator">,  </span><span class="stat-key-p-value">p  &gt;  .75    </span>
+            <span class="stat-key-correlation">r = .14</span><span class="stat-key-separator">,</span>
+            <span class="stat-key-slope">b = 0.12</span><span class="stat-key-separator">,</span>
+            <span class="stat-key-p-value">p &gt; .75</span>
         </div>
 
         <p>The correlation (r) between the percent of adults who skipped a routine checkup and the percent reporting mental distress indicates a positive, weak relationship.</p>
