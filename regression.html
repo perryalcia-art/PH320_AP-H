@@ -36,6 +36,28 @@
             margin: 24px auto;
         }
 
+        .stat-key {
+            display: flex;
+            justify-content: center;
+            gap: clamp(16px, 5vw, 36px);
+            margin: -8px 0 28px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .stat-key-correlation {
+            color: #217a4b;
+        }
+
+        .stat-key-slope {
+            color: #b33a3a;
+        }
+
+        .stat-key-p-value {
+            color: #8b6b00;
+        }
+
         .home-link {
             display: inline-block;
             margin-top: 16px;
@@ -258,6 +280,11 @@
         <h1>Regressional Studies: No Health Check-Ups &amp; Mental Distress</h1>
 
         <img src="table.png" alt="Regression output table">
+        <div class="stat-key" aria-label="Regression statistics">
+            <span class="stat-key-correlation">r = .14</span>
+            <span class="stat-key-slope">b = 0.12</span>
+            <span class="stat-key-p-value">p = .075</span>
+        </div>
 
         <p>The correlation (r) between the percent of adults who skipped a routine checkup and the percent reporting mental distress indicates a positive, weak relationship.</p>
 
