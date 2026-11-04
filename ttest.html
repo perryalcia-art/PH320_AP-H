@@ -1,1 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Does Your Writing Hand Beat Your Other Hand? | Alcia Perry-Hilaire</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
+        body {
+            margin: 0;
+            background: #f2f6f6;
+            color: #172b3a;
+            font-family: "Segoe UI", Arial, sans-serif;
+            line-height: 1.75;
+        }
+
+        a {
+            color: #105359;
+        }
+
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 18px 28px;
+        }
+
+        .wordmark {
+            color: #172b3a;
+            font-size: 1rem;
+            font-weight: 750;
+            letter-spacing: -0.02em;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 28px;
+        }
+
+        .nav-links a {
+            color: #435963;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus-visible {
+            color: #105359;
+        }
+
+        main {
+            width: min(700px, calc(100% - 24px));
+            margin: 36px auto;
+            padding: 42px clamp(20px, 6vw, 48px);
+            border: 1px solid #dce5e5;
+            border-radius: 16px;
+            background: #fff;
+            box-shadow: 0 12px 30px #173a3a12;
+        }
+
+        h1 {
+            margin: 0 0 28px;
+            color: #172b3a;
+            font-size: clamp(2rem, 5vw, 2.8rem);
+            letter-spacing: -0.035em;
+            line-height: 1.2;
+        }
+
+        h2 {
+            margin-top: 36px;
+            color: #172b3a;
+            line-height: 1.3;
+        }
+
+        p {
+            color: #405563;
+            font-size: 1.05rem;
+        }
+
+        .results-wrap {
+            width: 100%;
+            overflow-x: auto;
+            margin: 24px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            text-align: left;
+        }
+
+        th,
+        td {
+            padding: 12px 10px;
+            border-bottom: 1px solid #dce5e5;
+            vertical-align: top;
+        }
+
+        th {
+            color: #172b3a;
+            font-size: 0.88rem;
+        }
+
+        td:not(:first-child),
+        th:not(:first-child) {
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        .home-link {
+            display: inline-block;
+            margin-top: 22px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .home-link:hover,
+        .home-link:focus-visible {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 32px;
+            padding-top: 18px;
+            border-top: 1px solid #dce5e5;
+            color: #526574;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+            color: inherit;
+            font-size: 0.82rem;
+        }
+
+        @media (max-width: 700px) {
+            .topbar {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 12px;
+                padding: 18px 20px;
+            }
+
+            .nav-links {
+                gap: 8px 18px;
+            }
+
+            main {
+                margin: 20px auto;
+                padding: 32px 20px;
+                border-radius: 12px;
+            }
+
+            table {
+                font-size: 0.84rem;
+            }
+
+            th,
+            td {
+                padding: 10px 7px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="topbar" aria-label="Main navigation">
+        <a class="wordmark" href="index.html">Alcia Perry-Hilaire</a>
+        <div class="nav-links">
+            <a href="index.html#work">Selected work</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </nav>
+
+    <main>
+        <h1>Does Your Writing Hand Beat Your Other Hand?</h1>
+
+        <h2>What We Did</h2>
+        <p>Our class counted how many times each student could write “I am amazing” in 30 seconds with their writing hand and their other hand. We also recorded each student's yes-or-no answer to whether they write in script. Dr. Jacques's writing-hand count of 8 was the benchmark. We used a one-sample t-test to compare the class writing-hand average with the benchmark, an independent-samples t-test to compare writing-hand counts between the yes and no groups, and a paired-samples t-test to compare each student's two hands.</p>
+
+        <h2>My Results</h2>
+        <div class="results-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Test</th>
+                        <th scope="col">Mean 1</th>
+                        <th scope="col">Mean 2</th>
+                        <th scope="col">Difference</th>
+                        <th scope="col">p-value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>One-sample: writing hand vs. benchmark</td>
+                        <td><strong>6.33</strong></td>
+                        <td><strong>8.00</strong></td>
+                        <td><strong>−1.67</strong></td>
+                        <td><strong>0.00105</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Independent-samples: yes vs. no</td>
+                        <td><strong>6.40</strong></td>
+                        <td><strong>6.25</strong></td>
+                        <td><strong>0.15</strong></td>
+                        <td><strong>0.848</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Paired-samples: writing hand vs. other hand</td>
+                        <td><strong>6.33</strong></td>
+                        <td><strong>2.56</strong></td>
+                        <td><strong>3.78</strong></td>
+                        <td><strong>0.00000647</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>The Three Write-Ups</h2>
+        <p><strong>Writing hand vs. benchmark:</strong> The class average was 1.67 fewer phrases than the professor's benchmark. This difference was statistically significant (p = 0.00105).</p>
+        <p><strong>Yes vs. no groups:</strong> The yes group averaged 0.15 more phrases than the no group. This difference was not statistically significant (p = 0.848).</p>
+        <p><strong>Writing hand vs. other hand:</strong> Students averaged 3.78 more phrases with their writing hand. This difference was statistically significant (p = 0.00000647).</p>
+
+        <h2>In Plain Words</h2>
+        <p>In this class, students wrote the phrase more times with their writing hand than with their other hand. The yes and no groups had very similar writing-hand averages, while the class writing-hand average was lower than the professor's benchmark.</p>
+
+        <h2>What I Would Do Differently</h2>
+        <p>This was a small class sample, so the results may not represent other students. The yes and no groups were also small and unequal in size. I would include more students and make sure everyone follows the same timing and counting instructions.</p>
+
+        <a class="home-link" href="index.html">Home</a>
+
+        <footer>
+            <p>Alcia Perry-Hilaire · PH 320 · Applied Biostatistics in Public Health</p>
+        </footer>
+    </main>
+</body>
+</html>
