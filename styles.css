@@ -45,6 +45,64 @@ summary:focus-visible {
     padding: 18px 28px;
 }
 
+.nav-menu {
+    position: relative;
+    margin-left: auto;
+}
+
+.nav-menu summary {
+    list-style: none;
+}
+
+.nav-menu summary::-webkit-details-marker {
+    display: none;
+}
+
+.menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 13px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--white);
+    color: var(--teal);
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 650;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus-visible {
+    background: #e8f2f1;
+}
+
+.menu-icon {
+    display: grid;
+    gap: 4px;
+}
+
+.menu-icon span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: currentColor;
+    transition: transform 160ms ease, opacity 160ms ease;
+}
+
+.nav-menu[open] .menu-icon span:first-child {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.nav-menu[open] .menu-icon span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-menu[open] .menu-icon span:last-child {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
 .wordmark {
     color: var(--navy);
     font-size: 1rem;
@@ -54,12 +112,24 @@ summary:focus-visible {
 }
 
 .nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px 28px;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    z-index: 10;
+    display: grid;
+    gap: 4px;
+    min-width: min(280px, calc(100vw - 32px));
+    padding: 8px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--white);
+    box-shadow: 0 14px 32px #173a3a1f;
 }
 
 .nav-links a {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 6px;
     color: #435963;
     font-size: 0.9rem;
     font-weight: 600;
@@ -67,7 +137,9 @@ summary:focus-visible {
 }
 
 .nav-links a:hover,
+.nav-links a:focus-visible,
 .nav-links a[aria-current="page"] {
+    background: #e8f2f1;
     color: var(--teal);
 }
 
@@ -390,9 +462,7 @@ footer.contact-footer {
 
 @media (max-width: 700px) {
     .topbar {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 12px;
+        padding: 16px 20px;
     }
 
     .hero-inner {
