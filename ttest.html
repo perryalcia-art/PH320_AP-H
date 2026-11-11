@@ -54,6 +54,19 @@
             font-size: 1.05rem;
         }
 
+        .test-selection {
+            padding-left: 1.4rem;
+        }
+
+        .test-selection li {
+            margin-bottom: 18px;
+            padding-left: 0.35rem;
+        }
+
+        .test-selection p {
+            margin: 0.35em 0;
+        }
+
         .results-wrap {
             width: 100%;
             overflow-x: auto;
@@ -202,6 +215,45 @@
 
         <h2>What I Would Do Differently</h2>
         <p>This was a small class sample, so the results may not represent other students. The yes and no groups were also small and unequal in size. I would include more students and make sure everyone follows the same timing and counting instructions.</p>
+
+        <h2>Which Test Would You Use?</h2>
+        <ol class="test-selection">
+            <li>
+                <p><strong>Question:</strong> A clinic measures patients' blood pressure before a six-week program and again after it. Did blood pressure change?</p>
+                <p><strong>Which test?</strong> Paired-samples t-test.</p>
+                <p><strong>What told you?</strong> The same patients were measured twice, before and after the program, so the two readings are linked.</p>
+            </li>
+            <li>
+                <p><strong>Question:</strong> A researcher compares average hours of sleep for students who commute and students who live on campus.</p>
+                <p><strong>Which test?</strong> Independent-samples t-test.</p>
+                <p><strong>What told you?</strong> Two separate groups of students (commuters and campus residents) are compared on average hours of sleep.</p>
+            </li>
+            <li>
+                <p><strong>Question:</strong> A county compares its own average birth weight to the national average of 7.5 pounds.</p>
+                <p><strong>Which test?</strong> One-sample t-test.</p>
+                <p><strong>What told you?</strong> One group’s average birth weight is compared to a known value, the national average of 7.5 pounds.</p>
+            </li>
+            <li>
+                <p><strong>Question:</strong> An analyst looks at 168 ZIP codes to see whether neighborhoods with more smoking also have more mental distress.</p>
+                <p><strong>Which test?</strong> Correlation.</p>
+                <p><strong>What told you?</strong> There is one group of 168 ZIP codes, with two numeric measures for each (smoking and mental distress), and the question asks whether they rise together. No t-test fits, because nothing is being compared between two groups or two points.</p>
+            </li>
+            <li>
+                <p><strong>Question:</strong> A gym measures each member's resting heart rate in January and again in June.</p>
+                <p><strong>Which test?</strong> Paired-samples t-test.</p>
+                <p><strong>What told you?</strong> The same members’ resting heart rates are measured at two points, January and June.</p>
+            </li>
+            <li>
+                <p><strong>Question:</strong> A study compares average emergency room wait times at two different hospitals.</p>
+                <p><strong>Which test?</strong> Independent-samples t-test.</p>
+                <p><strong>What told you?</strong> Average wait times are compared between two hospitals, which are two separate groups of patients.</p>
+            </li>
+            <li>
+                <p><strong>Question:</strong> A survey asks whether people have health insurance (yes or no) and whether they smoke (yes or no), and asks if the two are related.</p>
+                <p><strong>Which test?</strong> Chi-square test of independence.</p>
+                <p><strong>What told you?</strong> Both variables are yes/no categories, so there are no averages to compare, and the question asks whether the two are related. This is the odd one.</p>
+            </li>
+        </ol>
 
         <a class="home-link" href="index.html">Home</a>
 
